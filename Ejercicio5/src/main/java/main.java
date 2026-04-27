@@ -87,8 +87,8 @@ public class main {
     public static void listarFicherosCarpeta(String carpeta){
         Path p = Paths.get("C:\\Users\\alumno\\IdeaProjects\\ficheros\\Ejercicio5",carpeta);
 
-        try {
-
+        try  {
+            Files.list(p).forEach(System.out::println);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

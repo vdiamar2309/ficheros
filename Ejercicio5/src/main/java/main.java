@@ -38,7 +38,7 @@ public class main {
                     borrarFicheroODirectorio(nombre);
                 }
                 case "ls"->{
-                    String nombre = MiEntradaSalida.solicitarCadena("¿Que fichero o directorio quiere borrar?");
+                    String nombre = MiEntradaSalida.solicitarCadena("¿Que directorio quieres listar?");
                     listarFicherosCarpeta(nombre);
                 }
                 default -> System.out.println(acciones);
@@ -85,7 +85,7 @@ public class main {
 
 
     public static void listarFicherosCarpeta(String carpeta){
-        Path p = Paths.get("C:\\Users\\alumno\\IdeaProjects\\ficheros\\Ejercicio5",carpeta);
+        Path p = Paths.get("C:\\",carpeta);
 
         try  {
             Files.list(p).forEach(System.out::println);

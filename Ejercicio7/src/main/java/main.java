@@ -25,6 +25,10 @@ public class main {
                 }
                 case "listar" ->{
                     String ruta = util.MiEntradaSalida.solicitarCadena("Introduce la ruta del directorio que quiere listar");
+                    listar(ruta);
+                }
+                case "buscar"->{
+                    String ruta = util.MiEntradaSalida.solicitarCadena("Introduce la ruta del directorio que quiere listar");
 
                 }
             }
@@ -33,15 +37,13 @@ public class main {
 
 
     public static void listar(String ruta){
-        Path p = Paths.get("C:\\",ruta);
+        Path p = Paths.get(ruta);
         try {
             List<Path> ubicaciones = Files.list(p).toList();
 
-
-
             for (Path i : ubicaciones){
                 System.out.print(i.toString()+" "+formatearTamanio(Files.size(i)));
-
+                System.out.println();
             }
 
         } catch (Exception e) {

@@ -90,14 +90,28 @@ public class main {
         try  {
             List <Path> ls = Files.list(p).toList();
             for (Path i: ls){
-                System.out.println(i+Files.size(i));
+                double tamanio = Files.size(i);
+
+                System.out.println(i.toString()+" "+formatearTamanio(tamanio));
             }
+
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
 
 
     }
 
+
+    private static String formatearTamanio(double bytes) {
+        if (bytes < 1024)
+            return (int) bytes + " B";
+        else if (bytes < 1024 * 1024)
+            return String.format("%.2f KB", bytes / 1024);
+        else if (bytes < 1024 * 1024 * 1024)
+            return String.format("%.2f MB", bytes / (1024 * 1024));
+        else
+            return String.format("%.2f GB", bytes / (1024 * 1024 * 1024));
+    }
 
 }

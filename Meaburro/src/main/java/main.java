@@ -2,6 +2,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,15 +23,19 @@ public class main {
 
         try {
 
-
+            List<Matricula> matriculasValidas = new ArrayList<>();
             for (String i :Files.readAllLines(p) ){
                 Matcher m = patron.matcher(i);
 
                 if (m.find()){
                     String numeros = m.group("numeros");
                     String letras = m.group("letras");
+
+                    matriculasValidas.add(new Matricula(numeros, letras));
                 }
             }
+
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

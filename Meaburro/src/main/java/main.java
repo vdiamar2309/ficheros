@@ -31,7 +31,7 @@ public class main {
                 }
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
 
 

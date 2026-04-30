@@ -1,0 +1,163 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Stream;
+
+import static java.nio.file.Files.*;
+
+public class MainAlumnos {
+
+    // Ruta base donde se organizarán todos los logs procesados
+    public final static Path RUTA_DESTINO = Path.of("./logs_procesados");
+
+    // Patrón para identificar ficheros de log con el formato: server{N}_app{N}.log
+    private static final Pattern patron = Pattern.compile("server(?<server>[0-9])_app(?<app>[12])(.log)$"); //TODO: crear el patrón con la regexp del nombre del archivo
+
+    // Patrón para parsear líneas de log de la app1
+    // Formato esperado: yyyy/MM/dd HH:mm:ss - [NIVEL] - Mensaje
+    private final static Pattern patronLogApp1 = Pattern.compile("CAMBIALO"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
+
+    // Patrón para parsear líneas de log de la app2
+    // Formato esperado: [dd-MM-yyyy|HH:mm:ss] <NIVEL> Mensaje
+    private final static Pattern patronLogApp2 = null; //TODO: ídem del anterior pero con el formato de la app2
+
+    public static void main(String[] args) {
+
+        // Generamos el entorno de prueba con los logs desordenados
+        GeneradorLogsExamen.execute();
+
+        // Limpiamos la carpeta de destino antes de empezar para evitar
+        // mezclar resultados de ejecuciones anteriores
+        eliminarDirectorioRecursivo(RUTA_DESTINO);
+
+        Path carpetaRaiz = Path.of("./entorno_examen_logs");
+        organizaCaosLogs(carpetaRaiz);
+    }
+
+    /**
+     * Recorre recursivamente la carpeta raíz en busca de ficheros de log,
+     * los mueve a su ubicación organizada y extrae los errores de cada uno.
+     *
+     * @param carpetaRaiz Ruta del directorio origen donde están los logs mezclados.
+     */
+    private static void organizaCaosLogs(Path carpetaRaiz) {
+
+        // Lista acumuladora de todos los errores encontrados en todos los ficheros
+        List<DetalleError> todosLosErrores = new ArrayList<>();
+
+
+        /*try () {
+
+            // Solo procesamos ficheros cuyo nombre coincide con el patrón esperado
+
+            // Construimos la ruta destino organizada por servidor y aplicación
+
+
+            // Creamos los directorios intermedios si no existen
+
+
+            // Movemos el fichero a su nueva ubicación organizada
+
+
+            // Inspeccionamos el fichero ya movido en busca de líneas de nivel ERROR,
+            // usando el patrón correspondiente según la aplicación
+
+
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }*/
+
+        // Una vez procesados todos los ficheros, escribimos el reporte global de errores
+
+        try {
+            List <Path> rutas = Files.walk(carpetaRaiz).toList();
+
+            for (Path i : rutas){
+                Matcher m = patron.matcher(i.toString());
+                if (m.find()){
+                    Path p = Paths.get(RUTA_DESTINO.toString(),"server"+m.group("server"));
+                    if (Files.notExists(p)){
+                        Files.createDirectories(p);
+                    }
+
+                    Path rutaX = Paths.get(p+"\\app"+m.group("app"));
+
+                    if (Files.notExists(rutaX)) {
+                        Files.createDirectory(rutaX);
+                    }
+
+                    System.out.println(i);
+
+               Files.move(i, rutaX.resolve(i.getFileName()));
+
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+
+        escribirErrorAFichero(todosLosErrores);
+    }
+
+    /**
+     * Lee un fichero de log línea a línea y extrae aquellas cuyo nivel sea ERROR.
+     *
+     * @param p          Ruta del fichero a analizar
+     * @param logPattern Patrón regex correspondiente al formato de la aplicación
+     * @param server     ID del servidor de origen
+     * @param app        ID de la aplicación de origen
+     * @return Lista de errores encontrados en el fichero
+     * @throws LogException Si ocurre un error al leer el fichero
+     */
+    private static List<DetalleError> buscarErrores(Path p, Pattern logPattern, String server, String app) throws LogException {
+
+        // Aplicamos el patrón a cada línea para obtener un Matcher
+        // Descartamos las líneas que no coinciden con el formato esperado
+        // Nos quedamos solo con las líneas de nivel ERROR
+        // Construimos el objeto DetalleError con los datos extraídos
+
+        return null; //TODO: obviamente, cambia esto
+    }
+
+    /**
+     * Serializa la lista de errores a JSON con formato legible
+     * y la escribe en un fichero de reporte dentro de la carpeta de destino.
+     *
+     * @param errores Lista de errores recolectados a escribir.
+     */
+    private static void escribirErrorAFichero(List<DetalleError> errores) {
+
+    }
+
+    /**
+     * Borra un directorio y todo su contenido de forma recursiva.
+     * Los ficheros y subdirectorios se eliminan antes que sus padres
+     * para evitar errores al borrar directorios no vacíos.
+     *
+     * @param ruta Ruta del directorio a eliminar.
+     */
+    private static void eliminarDirectorioRecursivo(Path ruta) {
+        if (Files.exists(ruta)) {
+            try (Stream<Path> walk = walk(ruta)) {
+                walk.sorted(java.util.Comparator.reverseOrder()) // Borra hijos antes que padres
+                        .forEach(p -> {
+                            try {
+                                Files.delete(p);
+                            } catch (IOException e) {
+                                System.err.println("No se pudo borrar: " + p + " -> " + e.getMessage());
+                            }
+                        });
+                System.out.println("Carpeta de destino limpia.");
+            } catch (IOException e) {
+                System.err.println("Error al intentar limpiar el directorio: " + e.getMessage());
+            }
+        }
+    }
+}

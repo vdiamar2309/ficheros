@@ -20,7 +20,6 @@ public class main {
             }
         }
 
-
         try {
 
             List<Matricula> matriculasValidas = new ArrayList<>();

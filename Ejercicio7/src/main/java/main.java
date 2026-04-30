@@ -1,7 +1,9 @@
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class main {
     public static String ayuda = "1. Listar directorio\n" +
@@ -29,7 +31,10 @@ public class main {
                 }
                 case "buscar"->{
                     String ruta = util.MiEntradaSalida.solicitarCadena("Introduce la ruta del directorio que quiere listar");
-
+                }
+                case "listaf"->{
+                    String coincidencia = util.MiEntradaSalida.solicitarCadena("Introduce la coincidencia");
+                    listarAcabaCon(coincidencia);
                 }
             }
         }
@@ -67,7 +72,21 @@ public class main {
     }
 
 
+    public static void listarAcabaCon(String formato){
+        Path p = Paths.get("C:\\");
+        try {
+            List <Path> recursivoPaths = Files.list(p).toList();
 
+           recursivoPaths.stream().filter(recursivos -> recursivos
+                   .toString()
+                    .endsWith("txt")).forEach(System.out::println);
+
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
 
 
 

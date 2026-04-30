@@ -20,11 +20,11 @@ public class MainAlumnos {
 
     // Patrón para parsear líneas de log de la app1
     // Formato esperado: yyyy/MM/dd HH:mm:ss - [NIVEL] - Mensaje
-    private final static Pattern patronLogApp1 = Pattern.compile("CAMBIALO"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
+    private final static Pattern patronLogApp1 = Pattern.compile("^(?<anio>[0-9]{4})/(?<mes>[01][0-9])/(?<dia>[0-3][0-9])\\s(?<hora>[0-2][0-9]):(?<minuto>[0-5][0-9]):(?<segundo>[0-5][0-9])\\s-\\s\\[(?<error>[A-Z]*)\\]\\s-\\s(?<mensaje>([A-z]*[\\ ]*)*[\\.]*)"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
 
     // Patrón para parsear líneas de log de la app2
     // Formato esperado: [dd-MM-yyyy|HH:mm:ss] <NIVEL> Mensaje
-    private final static Pattern patronLogApp2 = null; //TODO: ídem del anterior pero con el formato de la app2
+    private final static Pattern patronLogApp2 = Pattern.compile("\\[(?<fecha>[0-3][0-9]-[0-1][0-9]-[1-2][0-9]{3})\\|(?<hora>[0-9]{2}:[0-5][0-9]:[0-5][0-9])\\] (?<dc><[A-Z]*>) (?<dl>[[A-z]* ]*.*)"); //TODO: ídem del anterior pero con el formato de la app2
 
     public static void main(String[] args) {
 

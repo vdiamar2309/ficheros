@@ -20,11 +20,11 @@ public class MainAlumnos {
 
     // Patrón para parsear líneas de log de la app1
     // Formato esperado: yyyy/MM/dd HH:mm:ss - [NIVEL] - Mensaje
-    private final static Pattern patronLogApp1 = Pattern.compile("^(?<anio>[0-9]{4})/(?<mes>[01][0-9])/(?<dia>[0-3][0-9])\\s(?<hora>[0-2][0-9]):(?<minuto>[0-5][0-9]):(?<segundo>[0-5][0-9])\\s-\\s\\[(?<error>[A-Z]*)\\]\\s-\\s(?<mensaje>([A-z]*[\\ ]*)*[\\.]*)"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
+    private final static Pattern patronLogApp1 = Pattern.compile("(?<fecha>[0-9]{4}\\/[0-9]{2}\\/[0-9]{2})\\s(?<hora>[0-2][0-9]:[0-5][0-9]:[0-5][0-9])\\s-\\s\\[(?<error>[A-Z]*)\\]\\s-\\s(?<mensaje>([A-z]*[\\ ]*)*[\\.]*)"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
 
     // Patrón para parsear líneas de log de la app2
     // Formato esperado: [dd-MM-yyyy|HH:mm:ss] <NIVEL> Mensaje
-    private final static Pattern patronLogApp2 = Pattern.compile("\\[(?<fecha>[0-3][0-9]-[0-1][0-9]-[1-2][0-9]{3})\\|(?<hora>[0-9]{2}:[0-5][0-9]:[0-5][0-9])\\] (?<dc><[A-Z]*>) (?<dl>[[A-z]* ]*.*)"); //TODO: ídem del anterior pero con el formato de la app2
+    private final static Pattern patronLogApp2 = Pattern.compile("\\[(?<fecha>[0-3][0-9]-[0-1][0-9]-[1-2][0-9]{3})\\|(?<hora>[0-9]{2}:[0-5][0-9]:[0-5][0-9])\\] <(?<error>[A-Z]*)> (?<dl>[[A-z]* ]*.*)"); //TODO: ídem del anterior pero con el formato de la app2
 
     public static void main(String[] args) {
 
@@ -37,6 +37,12 @@ public class MainAlumnos {
 
         Path carpetaRaiz = Path.of("./entorno_examen_logs");
         organizaCaosLogs(carpetaRaiz);
+
+        try {
+            buscarErrores(patronLogApp2,"server3","app2");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     /**
@@ -91,7 +97,7 @@ public class MainAlumnos {
                         Files.createDirectory(rutaX);
                     }
 
-                    System.out.println(i);
+
 
                Files.move(i, rutaX.resolve(i.getFileName()));
 
@@ -109,19 +115,45 @@ public class MainAlumnos {
     /**
      * Lee un fichero de log línea a línea y extrae aquellas cuyo nivel sea ERROR.
      *
-     * @param p          Ruta del fichero a analizar
+   //  * @param p          Ruta del fichero a analizar
      * @param logPattern Patrón regex correspondiente al formato de la aplicación
      * @param server     ID del servidor de origen
      * @param app        ID de la aplicación de origen
      * @return Lista de errores encontrados en el fichero
      * @throws LogException Si ocurre un error al leer el fichero
      */
-    private static List<DetalleError> buscarErrores(Path p, Pattern logPattern, String server, String app) throws LogException {
 
+    //Aportas un servidor, la aplicación y te resuelve automaticamente la ruta
+
+    private static List<DetalleError> buscarErrores(Pattern logPattern, String server, String app) throws LogException {
         // Aplicamos el patrón a cada línea para obtener un Matcher
         // Descartamos las líneas que no coinciden con el formato esperado
         // Nos quedamos solo con las líneas de nivel ERROR
         // Construimos el objeto DetalleError con los datos extraídos
+
+        Path ruta = RUTA_DESTINO.resolve(server,app+"\\"+server+"_"+app+".log");
+
+
+        try {
+
+
+
+            List <DetalleError> lineasaDevolver=new ArrayList<>();
+            for (String i : Files.readAllLines(ruta)){
+                System.out.println(i);
+                Matcher m = logPattern.matcher(i);
+
+                if (m.group("error").equals("ERROR")){
+                    System.out.println(m.group("error"));
+                }
+            }
+
+
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
 
         return null; //TODO: obviamente, cambia esto
     }

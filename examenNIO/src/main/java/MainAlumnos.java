@@ -190,7 +190,10 @@ public class MainAlumnos {
         }
     }
 
-
+    /** Busca recursivamente los ficheros del directorio logs_procesados y lo devuelve en forma de lista
+     * <p>
+     * @return List <DetalleError>
+     */
     private static List<DetalleError> guardarErroresDeTodosLosFicheros() {
         List<DetalleError> detalleErrores= new ArrayList<>();
         //Una vez ordenado solamente tenemos que buscar los ficheros y guardarlos en la lista
@@ -203,11 +206,14 @@ public class MainAlumnos {
             List<Path> rutaLimpia = rutas.stream().filter(ruta -> !Files.isDirectory(ruta)
             ).toList();
 
+            //Recorro la ruta limpia
             for (Path i : rutaLimpia) {
+                //Creo otra expresión regular para sacar el servidor y la app
                 Pattern p = Pattern.compile(".\\\\logs_procesados\\\\(?<server>server[1-3])\\\\(?<app>app[1-2])");
                 Matcher m = p.matcher(i.toString());
                 String server;
                 String app;
+                //Si la app es de un tipo usa una regex u otra
                 if (m.find()) {
                     app = m.group("app");
                     server = m.group("server");
@@ -216,7 +222,7 @@ public class MainAlumnos {
                     } else {
                         regexFichero=patronLogApp2;
                     }
-
+                    // Lee todas las lineas y crea un objeto que será guardada en la lista que luego será devuelta en el return
                     for (String j : readAllLines(i)){
                         Matcher mErrores = regexFichero.matcher(j);
                         if (mErrores.find()){

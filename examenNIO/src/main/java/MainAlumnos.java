@@ -225,7 +225,7 @@ public class MainAlumnos {
                     // Lee todas las lineas y crea un objeto que será guardada en la lista que luego será devuelta en el return
                     for (String j : readAllLines(i)){
                         Matcher mErrores = regexFichero.matcher(j);
-                        if (mErrores.find()){
+                        if (mErrores.find() && mErrores.group("nivel").equals("ERROR")){
                             DetalleError de = new DetalleError(server,app,mErrores.group("dia")+"/"+mErrores.group("mes")+"/"+mErrores.group("anio"),mErrores.group("hora"), mErrores.group("mensaje"));
                             detalleErrores.add(de);
                         }

@@ -88,8 +88,10 @@ public class MainAlumnos {
             System.out.println(e.getMessage());
         }
        todosLosErrores = guardarErroresDeTodosLosFicheros();
-        for (DetalleError i : todosLosErrores){
-            System.out.println(i.fecha()+" "+i.server()+" "+i.aplicacion());
+        try {
+            escribirErrorAFichero(todosLosErrores);
+        } catch (LogException e) {
+            System.out.println(e.getMessage());
         }
 
     }
@@ -107,6 +109,8 @@ public class MainAlumnos {
      */
 
     //Aportas un servidor, la aplicación y te resuelve automaticamente la ruta
+
+    //Posible método obsoleto por reemplazo del mismo
     private static List<DetalleError> buscarErrores(Pattern logPattern, String server, String app) throws LogException {
         // Aplicamos el patrón a cada línea para obtener un Matcher
         // Descartamos las líneas que no coinciden con el formato esperado
@@ -142,12 +146,23 @@ public class MainAlumnos {
         }
         Gson gs = new GsonBuilder().setPrettyPrinting().create();
         String gson = gs.toJson(errores);
-        for (DetalleError i : errores) {
-            System.out.println(i.descripcion());
+        Path p = RUTA_DESTINO.resolve("errores.json");
+        System.out.println(p);
+        if (Files.notExists(p)){
+            try {
+                Files.createFile(p);
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
         }
 
-        System.out.println(errores.size());
-        Path p = RUTA_DESTINO.resolve(errores.getLast().server());
+
+        try {
+            Files.writeString(p, gson);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
 
     }
 

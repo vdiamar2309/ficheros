@@ -1,0 +1,1052 @@
+[
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:00:32",
+    "descripcion": "No se encuentra el archivo de configuracion."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:01:41",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:03:40",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:04:07",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:04:16",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:04:41",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:04:52",
+    "descripcion": "Fallo al autenticar usuario."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:05:54",
+    "descripcion": "Memoria insuficiente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:06:41",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:07:53",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:08:51",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:09:32",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:10:15",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:11:23",
+    "descripcion": "Memoria insuficiente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:12:34",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:13:54",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:14:38",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:16:19",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:17:58",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:18:16",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:18:53",
+    "descripcion": "Fallo al autenticar usuario."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:19:42",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:21:14",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:21:47",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:23:22",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:24:22",
+    "descripcion": "Memoria insuficiente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:26:11",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:27:26",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:28:16",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:29:18",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:30:50",
+    "descripcion": "Timeout en la conexion a BD."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:32:49",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:34:17",
+    "descripcion": "Timeout en la conexion a BD."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:34:44",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:35:34",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:37:17",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:38:27",
+    "descripcion": "No se encuentra el archivo de configuracion."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:38:58",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:39:34",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:41:13",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:41:51",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:42:51",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:43:13",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:44:00",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "2024/11/24",
+    "hora": "08:45:00",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:01:52",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:03:05",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:03:51",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:04:33",
+    "descripcion": "Disco lleno al intentar escribir."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:05:24",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:05:40",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:07:33",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:08:29",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:09:30",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:10:45",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:10:48",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:11:37",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:12:50",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:13:23",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:13:55",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:14:14",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:15:20",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:15:49",
+    "descripcion": "Disco lleno al intentar escribir."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:15:52",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:16:20",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:17:01",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:17:06",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:18:39",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:20:32",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:21:21",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:22:14",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:23:34",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:25:04",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:25:16",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:27:12",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:27:40",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:27:51",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:29:29",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:30:52",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:31:12",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:31:28",
+    "descripcion": "Disco lleno al intentar escribir."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:31:31",
+    "descripcion": "Disco lleno al intentar escribir."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:32:49",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:33:34",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:34:57",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:35:15",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:35:54",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:37:41",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:38:42",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:40:00",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:41:01",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:41:33",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:42:14",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:43:50",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "20-11-2024",
+    "hora": "08:45:14",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:00:12",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:00:33",
+    "descripcion": "Fallo al autenticar usuario."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:01:22",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:01:33",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:01:39",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:01:59",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:02:07",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:03:04",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:03:08",
+    "descripcion": "No se encuentra el archivo de configuracion."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:04:18",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:05:49",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:05:52",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:06:20",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:06:44",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:08:35",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:10:13",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:10:27",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:11:17",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:11:40",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:12:24",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:13:23",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:15:19",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:15:54",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:16:58",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:18:45",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:19:11",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:19:20",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:19:57",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:21:38",
+    "descripcion": "Timeout en la conexion a BD."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "2024/11/26",
+    "hora": "08:23:01",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:00:21",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:02:06",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:03:49",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:04:51",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:05:22",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:05:36",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:06:58",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:08:17",
+    "descripcion": "Error 500 al llamar a la API externa."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:08:56",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:09:57",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:10:42",
+    "descripcion": "Iniciando servicio..."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:11:45",
+    "descripcion": "Disco lleno al intentar escribir."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:12:37",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:13:03",
+    "descripcion": "Error 500 al llamar a la API externa."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:14:32",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:14:47",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:16:37",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:17:35",
+    "descripcion": "Conexion a BD establecida."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:19:05",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:20:21",
+    "descripcion": "Usuario logueado correctamente."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:20:25",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:20:53",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:21:42",
+    "descripcion": "Sincronizacion completada."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:23:14",
+    "descripcion": "Limpiando cache temporal."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "21-11-2024",
+    "hora": "08:24:06",
+    "descripcion": "Iniciando servicio..."
+  }
+]

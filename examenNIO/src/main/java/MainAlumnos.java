@@ -1,3 +1,7 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import javax.print.attribute.standard.Destination;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,11 +24,11 @@ public class MainAlumnos {
 
     // Patrón para parsear líneas de log de la app1
     // Formato esperado: yyyy/MM/dd HH:mm:ss - [NIVEL] - Mensaje
-    private final static Pattern patronLogApp1 = Pattern.compile("(?<fecha>[0-9]{4}\\/[0-9]{2}\\/[0-9]{2})\\s(?<hora>[0-2][0-9]:[0-5][0-9]:[0-5][0-9])\\s-\\s\\[(?<error>[A-Z]*)\\]\\s-\\s(?<mensaje>([A-z]*[\\ ]*)*[\\.]*)"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
+    private final static Pattern patronLogApp1 = Pattern.compile("(?<fecha>[0-9]{4}\\/[0-9]{2}\\/[0-9]{2})\\s(?<hora>[0-2][0-9]:[0-5][0-9]:[0-5][0-9])\\s-\\s\\[(?<nivel>[A-Z]*)\\]\\s-\\s(?<mensaje>([A-z]*[\\ ]*)*[\\.]*)"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
 
     // Patrón para parsear líneas de log de la app2
     // Formato esperado: [dd-MM-yyyy|HH:mm:ss] <NIVEL> Mensaje
-    private final static Pattern patronLogApp2 = Pattern.compile("\\[(?<fecha>[0-3][0-9]-[0-1][0-9]-[1-2][0-9]{3})\\|(?<hora>[0-9]{2}:[0-5][0-9]:[0-5][0-9])\\] <(?<error>[A-Z]*)> (?<dl>[[A-z]* ]*.*)"); //TODO: ídem del anterior pero con el formato de la app2
+    private final static Pattern patronLogApp2 = Pattern.compile("\\[(?<fecha>[0-3][0-9]-[0-1][0-9]-[1-2][0-9]{3})\\|(?<hora>[0-9]{2}:[0-5][0-9]:[0-5][0-9])\\] <(?<nivel>[A-Z]*)> (?<mensaje>[[A-z]* ]*.*)"); //TODO: ídem del anterior pero con el formato de la app2
 
     public static void main(String[] args) {
 
@@ -38,11 +42,6 @@ public class MainAlumnos {
         Path carpetaRaiz = Path.of("./entorno_examen_logs");
         organizaCaosLogs(carpetaRaiz);
 
-        try {
-            buscarErrores(patronLogApp2,"server3","app2");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     /**
@@ -103,19 +102,15 @@ public class MainAlumnos {
 
                 }
             }
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
-
-        escribirErrorAFichero(todosLosErrores);
     }
 
     /**
      * Lee un fichero de log línea a línea y extrae aquellas cuyo nivel sea ERROR.
      *
-   //  * @param p          Ruta del fichero a analizar
+     * @param p          Ruta del fichero a analizar
      * @param logPattern Patrón regex correspondiente al formato de la aplicación
      * @param server     ID del servidor de origen
      * @param app        ID de la aplicación de origen
@@ -130,32 +125,22 @@ public class MainAlumnos {
         // Descartamos las líneas que no coinciden con el formato esperado
         // Nos quedamos solo con las líneas de nivel ERROR
         // Construimos el objeto DetalleError con los datos extraídos
-
         Path ruta = RUTA_DESTINO.resolve(server,app+"\\"+server+"_"+app+".log");
 
-
+        List <DetalleError> devolverErrores=new ArrayList<>();
         try {
-
-
-
-            List <DetalleError> lineasaDevolver=new ArrayList<>();
             for (String i : Files.readAllLines(ruta)){
-                System.out.println(i);
                 Matcher m = logPattern.matcher(i);
 
-                if (m.group("error").equals("ERROR")){
-                    System.out.println(m.group("error"));
+                if (m.find() && m.group("nivel").equals("ERROR")){
+                    DetalleError dt = new DetalleError(server,app,m.group("fecha"),m.group("hora"),m.group("mensaje"));
+                    devolverErrores.add(dt);
                 }
             }
-
-
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
-
-        return null; //TODO: obviamente, cambia esto
+        return devolverErrores;
     }
 
     /**
@@ -164,7 +149,18 @@ public class MainAlumnos {
      *
      * @param errores Lista de errores recolectados a escribir.
      */
-    private static void escribirErrorAFichero(List<DetalleError> errores) {
+    private static void escribirErrorAFichero(List<DetalleError> errores) throws LogException {
+        if (errores.isEmpty()){
+            throw new LogException("El fichero de errores está vacío");
+        }
+    Gson gs = new GsonBuilder().setPrettyPrinting().create();
+    String gson = gs.toJson(errores);
+        for (DetalleError i : errores){
+            System.out.println(i.descripcion());
+        }
+
+        System.out.println(errores.size());
+    Path p = RUTA_DESTINO.resolve(errores.getLast().server());
 
     }
 

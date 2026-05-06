@@ -147,7 +147,6 @@ public class MainAlumnos {
         Gson gs = new GsonBuilder().setPrettyPrinting().create();
         String gson = gs.toJson(errores);
         Path p = RUTA_DESTINO.resolve("errores.json");
-        System.out.println(p);
         if (Files.notExists(p)){
             try {
                 Files.createFile(p);

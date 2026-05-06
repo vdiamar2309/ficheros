@@ -24,11 +24,11 @@ public class MainAlumnos {
 
     // Patrón para parsear líneas de log de la app1
     // Formato esperado: yyyy/MM/dd HH:mm:ss - [NIVEL] - Mensaje
-    private final static Pattern patronLogApp1 = Pattern.compile("(?<fecha>[0-9]{4}\\/[0-9]{2}\\/[0-9]{2})\\s(?<hora>[0-2][0-9]:[0-5][0-9]:[0-5][0-9])\\s-\\s\\[(?<nivel>[A-Z]*)\\]\\s-\\s(?<mensaje>([A-z]*[\\ ]*)*[\\.]*)"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
+    private final static Pattern patronLogApp1 = Pattern.compile("(?<fecha>(?<anio>[0-9]{4})\\/(?<mes>[0-9]{2})\\/(?<dia>[0-9]{2}))\\s(?<hora>[0-2][0-9]:[0-5][0-9]:[0-5][0-9])\\s-\\s\\[(?<nivel>[A-Z]*)\\]\\s-\\s(?<mensaje>([A-z]*[\\ ]*)*[\\.]*)"); //TODO: crear el patrón con la regexp del formato de logs de la app1. Consejo, usa grupos de captura nombrados.
 
     // Patrón para parsear líneas de log de la app2
     // Formato esperado: [dd-MM-yyyy|HH:mm:ss] <NIVEL> Mensaje
-    private final static Pattern patronLogApp2 = Pattern.compile("\\[(?<fecha>[0-3][0-9]-[0-1][0-9]-[1-2][0-9]{3})\\|(?<hora>[0-9]{2}:[0-5][0-9]:[0-5][0-9])\\] <(?<nivel>[A-Z]*)> (?<mensaje>[[A-z]* ]*.*)"); //TODO: ídem del anterior pero con el formato de la app2
+    private final static Pattern patronLogApp2 = Pattern.compile("\\[(?<fecha>(?<dia>[0-3][0-9])-(?<mes>[0-1][0-9])-(?<anio>[1-2][0-9]{3}))\\|(?<hora>[0-9]{2}:[0-5][0-9]:[0-5][0-9])\\] <(?<nivel>[A-Z]*)> (?<mensaje>[[A-z]* ]*.*)"); //TODO: ídem del anterior pero con el formato de la app2
 
     public static void main(String[] args) {
 
@@ -226,7 +226,7 @@ public class MainAlumnos {
                     for (String j : readAllLines(i)){
                         Matcher mErrores = regexFichero.matcher(j);
                         if (mErrores.find()){
-                            DetalleError de = new DetalleError(server,app,mErrores.group("fecha"),mErrores.group("hora"), mErrores.group("mensaje"));
+                            DetalleError de = new DetalleError(server,app,mErrores.group("dia")+"/"+mErrores.group("mes")+"/"+mErrores.group("anio"),mErrores.group("hora"), mErrores.group("mensaje"));
                             detalleErrores.add(de);
                         }
                     }

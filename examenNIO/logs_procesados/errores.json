@@ -1,0 +1,177 @@
+[
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "21/11/2024",
+    "hora": "08:03:13",
+    "descripcion": "Memoria insuficiente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "21/11/2024",
+    "hora": "08:22:45",
+    "descripcion": "Fallo al autenticar usuario."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "21/11/2024",
+    "hora": "08:24:16",
+    "descripcion": "No se encuentra el archivo de configuracion."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "21/11/2024",
+    "hora": "08:26:48",
+    "descripcion": "Timeout en la conexion a BD."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "21/11/2024",
+    "hora": "08:38:40",
+    "descripcion": "Memoria insuficiente."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app1",
+    "fecha": "21/11/2024",
+    "hora": "08:44:29",
+    "descripcion": "Timeout en la conexion a BD."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:03:28",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:05:21",
+    "descripcion": "Disco lleno al intentar escribir."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:06:53",
+    "descripcion": "Error 500 al llamar a la API externa."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:13:19",
+    "descripcion": "Disco lleno al intentar escribir."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:28:37",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:30:43",
+    "descripcion": "Disco lleno al intentar escribir."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:34:08",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:37:40",
+    "descripcion": "Error 500 al llamar a la API externa."
+  },
+  {
+    "server": "server1",
+    "aplicacion": "app2",
+    "fecha": "15/11/2024",
+    "hora": "08:42:57",
+    "descripcion": "Token JWT expirado o invalido."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "26/11/2024",
+    "hora": "08:03:32",
+    "descripcion": "Fallo al autenticar usuario."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "26/11/2024",
+    "hora": "08:05:08",
+    "descripcion": "Timeout en la conexion a BD."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "26/11/2024",
+    "hora": "08:07:17",
+    "descripcion": "Timeout en la conexion a BD."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "26/11/2024",
+    "hora": "08:17:36",
+    "descripcion": "Memoria insuficiente."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "26/11/2024",
+    "hora": "08:19:11",
+    "descripcion": "No se encuentra el archivo de configuracion."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "26/11/2024",
+    "hora": "08:26:36",
+    "descripcion": "Memoria insuficiente."
+  },
+  {
+    "server": "server2",
+    "aplicacion": "app1",
+    "fecha": "26/11/2024",
+    "hora": "08:27:40",
+    "descripcion": "Timeout en la conexion a BD."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "13/11/2024",
+    "hora": "08:02:28",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "13/11/2024",
+    "hora": "08:08:59",
+    "descripcion": "NullPointerException en el servicio."
+  },
+  {
+    "server": "server3",
+    "aplicacion": "app2",
+    "fecha": "13/11/2024",
+    "hora": "08:15:07",
+    "descripcion": "Token JWT expirado o invalido."
+  }
+]

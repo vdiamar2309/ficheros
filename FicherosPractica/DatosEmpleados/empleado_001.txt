@@ -1,0 +1,3 @@
+Nombre: Ana García
+Departamento: Ventas
+Edad: 28

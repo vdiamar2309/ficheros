@@ -1,0 +1,3 @@
+Nombre: Luis Ortega
+Departamento: Compras
+Edad: 47
